@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&family=Cookie&family=Croissant+One&family=DM+Serif+Display&family=Luckiest+Guy&family=Montserrat+Alternates:wght@300;400&family=Montserrat:wght@300;400&family=Noto+Sans+KR:wght@100;900&family=Open+Sans:wght@300&family=Philosopher:wght@700&family=Playfair+Display:wght@500&family=Quicksand:wght@500;700&family=Raleway:wght@300;400&family=Roboto+Slab&family=Roboto:wght@100&family=Space+Mono&family=Tangerine&family=Vidaloka&display=swap" rel="stylesheet">
+    <title>Sten, sax, påse</title>
+</head>
+<body>
+    <h1>Sten - Sax - Påse</h1>
+    <p>Klassiska "Sten, sax, påse" fast digitalt. Tryck på en bild nedan för att välja ditt drag: sten, sax eller påse.<br>Du spelar mot datorn. Först till fem vinster gäller.</p>
+
+    
+    <div class="play-container">
+        <!-- Rock, scissors, paper Images -->
+        <div class="item-div">
+            <figure id="rock" class="item-figures">
+                <img class="item-img" src="./images/rock.svg" alt="Sten">
+                <figcaption>Sten</figcaption>
+            </figure>
+            <figure id="scissors" class="item-figures">
+                <img class="item-img" src="./images/scissors.svg" alt="Sax">
+                <figcaption>Sax</figcaption>
+            </figure>
+            <figure id="paper" class="item-figures">
+                <img class="item-img" src="./images/paper.svg" alt="Påse">
+                <figcaption>Påse</figcaption>
+            </figure>
+        </div>
+
+        <h2 class="outcome-text" id="win-or-loose-player"></h2>
+
+        <div class="play-area">
+            <div class="game-board game-board-player">
+                <img class="game-board-img" id="player-chosen-img">
+            </div>
+            <div class="game-board game-board-computer">
+                <p class="countdown"></p>
+                <img class="game-board-img" id="computer-chosen-img">
+            </div>
+        </div>
+    </div>
+
+    <div class="score-board">
+        <div class="score-board-player">
+            <h2 id="player-name">Spelare</h2>
+            <div class="score-card">
+                <p class="score-text">Poäng:</p>
+                <p class="score-number" id="score-player">0</p>
+            </div>
+        </div>
+        <div class="score-board-computer">
+            <h2>Datorn</h2>
+            <div class="score-card">
+                <p class="score-text">Poäng:</p>
+                <p class="score-number" id="score-computer">0</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="result-modal modal-hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="result-text"></h2>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
